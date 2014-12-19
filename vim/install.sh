@@ -6,10 +6,15 @@ bundles=(
 )
 
 function install_bundles() {
+    pushd ~/.vim/bundle
     for b in ${bundles[@]}; do
-        echo "    Installing ${b}"
-        git clone https://github.com/${b}.git ~/.vim/bundle
+        bundle=$(echo $b | awk -F '/' '{print $2}')
+        if [ ! -e ~/.vim/bundle/$bundle ]; then
+            echo "    Installing ${b} to ${bundle}"
+            git clone https://github.com/${b}.git
+        fi
     done
+    popd
 }
 
 if [ ! -e ~/.vim/autoload ]; then
@@ -17,5 +22,6 @@ if [ ! -e ~/.vim/autoload ]; then
     mkdir -p ~/.vim/autoload ~/.vim/bundle
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-    install_bundles
 fi
+
+install_bundles
