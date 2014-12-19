@@ -1,4 +1,48 @@
-syntax on
+execute pathogen#infect()
+execute pathogen#helptags()
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+" Line numbers
+set number
+
+" Syntax and colors
+syntax on
+filetype plugin indent on
+set encoding=utf8
+set fileformat=unix
+
+" Tabs and spaces
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
+au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js set shiftwidth=2
+
+" Mouse scrolling nonsense
+set mouse=a
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Markdown
+au BufNewFile,BufRead *.md set filetype=markdown
+
+" Airline
+set laststatus=2
+
+" search
+set ignorecase
+set showmatch
+
+" pymode
+let g:pymode_folding = 0
+let g:pymode_options_max_line_length = 79
+let g:pymode_indent = 1
+let g:pymode_lint = 1
+let g:pymode_lint_cwindow = 0
+let g:pymode_virtualenv = 1
+let g:pymode_lint_ignore = "E501"
+let g:pymode_lint_error_symbol = '✗'
+let g:pymode_doc = 0
+
+" It's 2012, Vim.
+set noswapfile
