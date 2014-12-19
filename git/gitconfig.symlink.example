@@ -1,8 +1,5 @@
 # Sample gitconfig
 #
-
-[hub]
-        protocol = https
 [user]
         name = AUTHORNAME
         email = AUTHOREMAIL
@@ -19,6 +16,10 @@
         status = auto
         branch = auto
         ui = true
+        lawg="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+        unstage='reset HEAD'
+        rollback='checkout'
+        staged-diff='diff --staged'
 [core]
         excludesfile = ~/.gitignore
         editor = vim
