@@ -45,6 +45,9 @@ let g:pymode_virtualenv = 1
 let g:pymode_lint_ignore = "E501"
 let g:pymode_lint_error_symbol = '✗'
 let g:pymode_doc = 0
+let g:pymode_rope = 0
 
-" It's 2012, Vim.
-set noswapfile
+" Swap files
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//

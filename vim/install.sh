@@ -17,11 +17,18 @@ function install_bundles() {
     popd
 }
 
-if [ ! -e ~/.vim/autoload ]; then
-    echo "  Installing pathogen"
-    mkdir -p ~/.vim/autoload ~/.vim/bundle
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+function setup_swap() {
+    mkdir ~/.vim/{backup,swap,undo} 2>/dev/null
+}
 
-fi
+function install_pathogen() {
+    if [ ! -e ~/.vim/autoload ]; then
+        echo "  Installing pathogen"
+        mkdir -p ~/.vim/{autoload,bundle}
+        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    fi
+}
 
+install_pathogen
 install_bundles
+setup_swap
