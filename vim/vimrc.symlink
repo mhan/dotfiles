@@ -35,6 +35,9 @@ set laststatus=2
 set ignorecase
 set showmatch
 
+" Completion
+set completeopt=menu
+
 " pymode
 let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 79
