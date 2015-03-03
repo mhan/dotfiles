@@ -11,15 +11,15 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        lawg="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+        unstage='reset HEAD'
+        rollback='checkout'
+        staged-diff='diff --staged'
 [color]
         diff = auto
         status = auto
         branch = auto
         ui = true
-        lawg="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-        unstage='reset HEAD'
-        rollback='checkout'
-        staged-diff='diff --staged'
 [core]
         excludesfile = ~/.gitignore
         editor = vim
