@@ -1,3 +1,4 @@
+#!/bin/bash
 bundles=(
     'scrooloose/nerdtree'
     'klen/python-mode'
