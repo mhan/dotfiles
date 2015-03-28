@@ -18,6 +18,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js set shiftwidth=2
+au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js set tabstop=2
 
 " Mouse scrolling nonsense
 set mouse=a

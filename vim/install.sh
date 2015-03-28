@@ -4,6 +4,8 @@ bundles=(
     'klen/python-mode'
     'bling/vim-airline'
     'altercation/vim-colors-solarized'
+    'mustache/vim-mustache-handlebars'
+    'pangloss/vim-javascript'
 )
 
 function install_bundles() {
