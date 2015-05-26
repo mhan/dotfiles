@@ -6,6 +6,8 @@ bundles=(
     'altercation/vim-colors-solarized'
     'mustache/vim-mustache-handlebars'
     'pangloss/vim-javascript'
+    'puppetlabs/puppet-syntax-vim'
+    'tpope/vim-surround'
 )
 
 function install_bundles() {
