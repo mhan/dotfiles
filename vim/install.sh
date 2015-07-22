@@ -8,6 +8,7 @@ bundles=(
     'pangloss/vim-javascript'
     'puppetlabs/puppet-syntax-vim'
     'tpope/vim-surround'
+    'chase/vim-ansible-yaml'
 )
 
 function install_bundles() {
