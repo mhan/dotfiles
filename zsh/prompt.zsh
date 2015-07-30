@@ -72,10 +72,19 @@ directory_name() {
 }
 
 host_info() {
-    echo "%{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
+    if [[ -z "$SSH_CLIENT" ]]; then
+        echo "%{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
+    else
+        echo "%{$fg_bold[red]%}[ssh] %{$fg_no_bold[white]%}%n@%m%{$reset_color%}"
+    fi
 }
 
-export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍖  '
+if [[ -z "$SSH_CLIENT" ]]; then
+    export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍖  '
+else
+    export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍔  '
+
+fi
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
