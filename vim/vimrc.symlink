@@ -17,8 +17,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js set shiftwidth=2
-au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js set tabstop=2
+au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js,*.es,*.es6 set shiftwidth=2
+au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js,*.es,*.es6 set tabstop=2
 set modeline
 
 " Mouse scrolling nonsense
@@ -29,6 +29,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Markdown
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.es,*.es6 set filetype=javascript
 
 " Airline
 set laststatus=2
