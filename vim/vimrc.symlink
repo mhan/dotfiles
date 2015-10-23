@@ -31,6 +31,9 @@ map <C-n> :NERDTreeToggle<CR>
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.es,*.es6 set filetype=javascript
 
+" Vagrantfile
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
+
 " Airline
 set laststatus=2
 
@@ -48,7 +51,7 @@ let g:pymode_indent = 1
 let g:pymode_lint = 1
 let g:pymode_lint_cwindow = 0
 let g:pymode_virtualenv = 1
-let g:pymode_lint_ignore = "E501"
+let g:pymode_lint_ignore = "E501,C901"
 let g:pymode_lint_error_symbol = '✗'
 let g:pymode_doc = 0
 let g:pymode_rope = 0
