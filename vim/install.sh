@@ -8,6 +8,7 @@ bundles=(
     'pangloss/vim-javascript'
     'puppetlabs/puppet-syntax-vim'
     'tpope/vim-surround'
+    'tpope/vim-markdown'
     'chase/vim-ansible-yaml'
 )
 
