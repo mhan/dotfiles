@@ -21,6 +21,9 @@ au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js,*.es,*.es6 set shiftwidt
 au BufNewFile,BufReadPost *.css,*.html,*.mako,*.rb,*.js,*.es,*.es6 set tabstop=2
 set modeline
 
+" Map esc
+:imap jk <Esc>
+
 " Mouse scrolling nonsense
 set mouse=a
 
