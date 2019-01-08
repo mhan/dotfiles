@@ -9,8 +9,8 @@ syntax on
 filetype plugin indent on
 set encoding=utf8
 set fileformat=unix
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 let g:markdown_syntax_conceal = 0
 
 " Tabs and spaces
