@@ -1,1 +1,24 @@
 set -g default-terminal "screen-256color"
+
+# remap prefix from 'C-b' to 'C-a'
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# split panes using | and -
+bind-key | split-window -h
+bind-key - split-window -v
+unbind '"'
+unbind %
+
+# Enable mouse mode (tmux 2.1 and above)
+set -g mouse off
+
+# reload config file (change file location to your the tmux.conf you want to use)
+bind-key r source-file ~/.tmux.conf
+
+# vim like selection
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+#
+# vim like yank but also to system clipboard
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -selection clipboard'
