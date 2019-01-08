@@ -80,9 +80,9 @@ host_info() {
 }
 
 if [[ -z "$SSH_CLIENT" ]]; then
-    export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍖  '
+    export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍖 '
 else
-    export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍔  '
+    export PROMPT=$'\n$(host_info) $(rb_prompt)in $(directory_name) $(git_dirty)\n🍔 '
 
 fi
 set_prompt () {
