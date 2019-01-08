@@ -3,13 +3,13 @@ bundles=(
     'scrooloose/nerdtree'
     'klen/python-mode'
     'bling/vim-airline'
-    'altercation/vim-colors-solarized'
     'mustache/vim-mustache-handlebars'
     'pangloss/vim-javascript'
     'puppetlabs/puppet-syntax-vim'
     'tpope/vim-surround'
     'tpope/vim-markdown'
     'chase/vim-ansible-yaml'
+    'lifepillar/vim-solarized8'
 )
 
 function install_bundles() {
