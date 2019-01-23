@@ -10,6 +10,7 @@ bundles=(
     'tpope/vim-markdown'
     'chase/vim-ansible-yaml'
     'lifepillar/vim-solarized8'
+    'mxw/vim-jsx'
 )
 
 function install_bundles() {
