@@ -11,6 +11,7 @@ bundles=(
     'chase/vim-ansible-yaml'
     'lifepillar/vim-solarized8'
     'mxw/vim-jsx'
+    'jparise/vim-graphql'
 )
 
 function install_bundles() {
