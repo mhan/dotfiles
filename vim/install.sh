@@ -1,7 +1,6 @@
 #!/bin/bash
 bundles=(
     'scrooloose/nerdtree'
-    'klen/python-mode'
     'bling/vim-airline'
     'mustache/vim-mustache-handlebars'
     'pangloss/vim-javascript'
@@ -12,6 +11,7 @@ bundles=(
     'lifepillar/vim-solarized8'
     'mxw/vim-jsx'
     'jparise/vim-graphql'
+    'vim-syntastic/syntastic'
 )
 
 function install_bundles() {
