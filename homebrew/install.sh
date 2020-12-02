@@ -14,6 +14,6 @@ if [ "$(uname -s)" == "Darwin" ]; then
     fi
 
     # Install homebrew packages
-    brew install grc coreutils spark git ack
+    brew install grc coreutils spark git ack vim
 fi
 exit 0
